@@ -1,6 +1,6 @@
 Name:           perl-IPC-DirQueue
 Version:        1.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Disk-based many-to-many task queue
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -53,6 +53,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 
 %changelog
+* Mon Dec  7 2009 Stepan Kasal <skasal@redhat.com> - 1.0-3
+- rebuild against perl 5.10.1
+
 * Wed Sep 23 2009 Steve Traylen <steve.traylen@cern.ch> 1.0-2
 - Build requires perl(Time::HiRes) explicitly on RHEL4.
 
