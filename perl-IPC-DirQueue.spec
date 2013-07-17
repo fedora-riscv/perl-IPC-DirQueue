@@ -1,6 +1,6 @@
 Name:           perl-IPC-DirQueue
 Version:        1.0
-Release:        11%{?dist}
+Release:        12%{?dist}
 Summary:        Disk-based many-to-many task queue
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -53,6 +53,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 
 %changelog
+* Wed Jul 17 2013 Petr Pisar <ppisar@redhat.com> - 1.0-12
+- Perl 5.18 rebuild
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0-11
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
