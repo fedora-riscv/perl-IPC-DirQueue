@@ -1,6 +1,6 @@
 Name:           perl-IPC-DirQueue
 Version:        1.0
-Release:        17%{?dist}
+Release:        18%{?dist}
 Summary:        Disk-based many-to-many task queue
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -8,12 +8,27 @@ URL:            http://search.cpan.org/dist/IPC-DirQueue/
 Source0:        http://www.cpan.org/modules/by-module/IPC/IPC-DirQueue-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
+BuildRequires:  coreutils
+BuildRequires:  findutils
+BuildRequires:  make
+BuildRequires:  perl
+BuildRequires:  perl(bytes)
+BuildRequires:  perl(Config)
+BuildRequires:  perl(constant)
+BuildRequires:  perl(Errno)
 BuildRequires:  perl(ExtUtils::MakeMaker)
-
-%if %{?rhel}%{!?rhel:0} == 4
-BuildRequires:  perl(Time::HiRes) 
-%endif
-
+BuildRequires:  perl(Fcntl)
+BuildRequires:  perl(File::Path)
+BuildRequires:  perl(Getopt::Long)
+BuildRequires:  perl(IO::Socket::INET)
+BuildRequires:  perl(lib)
+BuildRequires:  perl(POE)
+BuildRequires:  perl(POE::Component::Server::TCP)
+BuildRequires:  perl(POE::Filter::Line)
+BuildRequires:  perl(strict)
+BuildRequires:  perl(Test)
+BuildRequires:  perl(Time::HiRes)
+BuildRequires:  perl(warnings)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 %description
@@ -53,6 +68,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 
 %changelog
+* Tue Aug 11 2015 Petr Šabata <contyk@redhat.com> - 1.0-18
+- Prevent FTBFS by correcting the build time dependency list
+
 * Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0-17
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
