@@ -12,6 +12,7 @@ BuildRequires:  coreutils
 BuildRequires:  findutils
 BuildRequires:  make
 BuildRequires:  perl
+BuildRequires:  perl-generators
 BuildRequires:  perl(bytes)
 BuildRequires:  perl(Config)
 BuildRequires:  perl(constant)
