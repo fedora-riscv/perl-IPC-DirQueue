@@ -6,7 +6,6 @@ License:        GPL+ or Artistic
 Group:          Development/Libraries
 URL:            http://search.cpan.org/dist/IPC-DirQueue/
 Source0:        http://www.cpan.org/modules/by-module/IPC/IPC-DirQueue-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  coreutils
 BuildRequires:  findutils
