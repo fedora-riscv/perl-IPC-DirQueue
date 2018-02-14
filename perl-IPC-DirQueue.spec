@@ -56,9 +56,6 @@ find $RPM_BUILD_ROOT -depth -type d -exec rmdir {} 2>/dev/null \;
 %check
 make test
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files
 %defattr(-,root,root,-)
 %doc BUGS CHANGES README.dist TODO
