@@ -4,8 +4,8 @@ Release:        24%{?dist}
 Summary:        Disk-based many-to-many task queue
 License:        GPL+ or Artistic
 Group:          Development/Libraries
-URL:            http://search.cpan.org/dist/IPC-DirQueue/
-Source0:        http://www.cpan.org/modules/by-module/IPC/IPC-DirQueue-%{version}.tar.gz
+URL:            https://metacpan.org/release/IPC-DirQueue
+Source0:        https://cpan.metacpan.org/modules/by-module/IPC/IPC-DirQueue-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  coreutils
 BuildRequires:  findutils
