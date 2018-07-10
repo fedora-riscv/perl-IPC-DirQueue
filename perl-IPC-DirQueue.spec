@@ -57,7 +57,6 @@ find $RPM_BUILD_ROOT -depth -type d -exec rmdir {} 2>/dev/null \;
 make test
 
 %files
-%defattr(-,root,root,-)
 %doc BUGS CHANGES README.dist TODO
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
