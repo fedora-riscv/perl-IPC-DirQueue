@@ -3,7 +3,6 @@ Version:        1.0
 Release:        26%{?dist}
 Summary:        Disk-based many-to-many task queue
 License:        GPL+ or Artistic
-Group:          Development/Libraries
 URL:            https://metacpan.org/release/IPC-DirQueue
 Source0:        https://cpan.metacpan.org/modules/by-module/IPC/IPC-DirQueue-%{version}.tar.gz
 BuildArch:      noarch
