@@ -1,6 +1,10 @@
+# the check was successful with mock + qemu usermode on x86_64 for riscv64
+# but failed with connection resfused by localhost on koji.
+%bcond_with tests
+
 Name:           perl-IPC-DirQueue
 Version:        1.0
-Release:        38%{?dist}
+Release:        38.rv64%{?dist}
 Summary:        Disk-based many-to-many task queue
 License:        GPL+ or Artistic
 URL:            https://metacpan.org/release/IPC-DirQueue
@@ -53,7 +57,11 @@ find $RPM_BUILD_ROOT -depth -type d -exec rmdir {} 2>/dev/null \;
 %{_fixperms} $RPM_BUILD_ROOT/*
 
 %check
+%if %{with tests}
 make test
+%else
+:
+%endif
 
 %files
 %doc BUGS CHANGES README.dist TODO
@@ -63,6 +71,9 @@ make test
 %{_bindir}/*
 
 %changelog
+* Sat Dec 24 2022 Liu Yang <Yang.Liu.sn@gmail.com> - 1.0-38.rv64
+- Disable failed test for riscv64 koji build.
+
 * Fri Jul 22 2022 Fedora Release Engineering <releng@fedoraproject.org> - 1.0-38
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild
 
